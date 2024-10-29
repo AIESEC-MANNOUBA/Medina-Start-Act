@@ -309,9 +309,9 @@ h6 {
   transition: all ease-in-out 0.3s;
   font-weight: 500;
   margin-left: 8px;
-  margin-top: 2px;
+  margin-top: 4px;
   line-height: 1;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .nav-menu li.buy-tickets a:hover {
