@@ -8,44 +8,25 @@
   <meta content="" name="keywords">
   <meta content="" name="description">
 
-  <!-- Favicons -->
-  <!--<link href="img/favicon.png" rel="icon">-->
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800"
-    rel="stylesheet">
-
+  <!-- Fonts and CSS Files -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
   <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="lib/animate/animate.min.css" rel="stylesheet">
   <link href="lib/venobox/venobox.css" rel="stylesheet">
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
   <link href="css/style.css" rel="stylesheet">
 
- 
-
+  <!-- Additional Custom Styles -->
   <style>
+    /* Countdown Style */
     #countdown {
       background-color: #f7f7f7;
       padding: 50px 0;
       text-align: center;
     }
-
-    #countdown h2 {
-      color: #333;
-      font-size: 36px;
-      margin-bottom: 20px;
-    }
-
-    #countdown-timer {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      font-size: 24px;
-    }
-
+    #countdown h2 { color: #333; font-size: 36px; margin-bottom: 20px; }
+    #countdown-timer { display: flex; justify-content: center; gap: 20px; font-size: 24px; }
     #countdown-timer div {
       background-color: #0f3458;
       color: white;
@@ -55,76 +36,77 @@
       flex: 1;
       margin: 10px;
     }
-
-    #countdown-timer span {
-      font-size: 36px;
-      display: block;
-    }
-
-    @media (max-width: 768px) {
-      #countdown h2 {
-        font-size: 28px;
-      }
-
-      #countdown-timer {
-        gap: 10px;
-      }
-
-      #countdown-timer div {
-        padding: 8px;
-        font-size: 16px;
-        min-width: 80px;
-      }
-
-      #countdown-timer span {
-        font-size: 24px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      #countdown h2 {
-        font-size: 24px;
-      }
-
-      #countdown-timer {
-        gap: 5px;
-      }
-
-      #countdown-timer div {
-        padding: 5px;
-        font-size: 12px;
-        min-width: 60px;
-      }
-
-      #countdown-timer span {
-        font-size: 20px;
-      }
-    }
-
-    .back-to-top {
-      background: #6c63ff;
-    }
-    .ss{
+    #countdown-timer span { font-size: 36px; display: block; }
+    .back-to-top { background: #6c63ff; }
+    .ss {
       background: #f82249;
-    border: 0;
-    padding: 10px 40px;
-    color: #fff;
-    transition: 0.4s;
-    border-radius: 50px;
-    cursor: pointer;
-    width: 50%;
-    font-size: 19px;
-    min-width: 150px !important;
+      border: 0;
+      padding: 10px 40px;
+      color: #fff;
+      transition: 0.4s;
+      border-radius: 50px;
+      cursor: pointer;
+      width: 50%;
+      font-size: 19px;
+      min-width: 150px !important;
     }
-    .ss:hover{
-      background: #e0072f;
+    .ss:hover { background: #e0072f; }
+
+    /* Styles for the prompt overlay */
+    #messenger-redirect {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      z-index: 9999;
     }
+    #messenger-redirect a {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #f82249;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      display: inline-block;
+    }
+    #messenger-redirect a:hover { background-color: #e0072f; }
   </style>
+
+  <!-- Messenger Detection Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+      // Detect Messenger's in-app browser
+      if (userAgent.includes("FBAN") || userAgent.includes("FBAV")) {
+        document.getElementById("messenger-redirect").style.display = "flex";
+      }
+    });
+  </script>
 </head>
 
 <body>
 
+  <!-- Prompt for Messenger users to open in external browser -->
+  <div id="messenger-redirect">
+    <div>
+      <p>For the best experience, please open this link in your main browser.</p>
+      <!-- External link to open in the default browser -->
+      <a href="https://aiesec-mannouba.github.io/Medina-Start-Act/" target="_blank" rel="noopener noreferrer">Open in Browser</a>
+    </div>
+  </div>
 
+  <!-- Page Content -->
   <header id="header">
     <div class="container">
       <div id="logo" class="pull-left">
@@ -145,10 +127,7 @@
     <div class="intro-container wow fadeIn">
       <h1 class="mb-4 pb-0">The First Edition of <br><span>Medina Start-Act</span></h1>
       <p class="mb-4 pb-0">16 November, Salle de conference Technopole Manouba</p>
-
       <a href="./Reel1.mp4" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
-
-
       <a href="#about" class="about-btn scrollto">About The Event</a>
     </div>
   </section>
@@ -159,8 +138,7 @@
         <div class="row">
           <div class="col-lg-6">
             <h2>About The Event</h2>
-            <p>
-              The first Medina Start-Act by AIESEC in Manouba on November 16, 2024 at the Technopole Conference Hall
+            <p>The first Medina Start-Act by AIESEC in Manouba on November 16, 2024 at the Technopole Conference Hall
               offers a platform to explore trends like Crypto, Freelancing, the Metaverse, and E-commerce. It’s a chance
               for professionals and youth to connect with industry leaders and gain insights into the future of business
               innovation.</p>
@@ -189,18 +167,13 @@
       </div>
     </section>
 
-
     <section id="contact" class="section-bg wow fadeInUp">
-
       <div class="container">
-
         <div class="section-header">
           <h2>Registration</h2>
-          <p> Join Us for an Unforgettable Experience</p>
+          <p>Join Us for an Unforgettable Experience</p>
         </div>
-
         <div class="row contact-info">
-
           <div class="col-md-4">
             <div class="contact-address">
               <i class="ion-ios-location-outline"></i>
@@ -208,53 +181,41 @@
               <address>Campus Manouba</address>
             </div>
           </div>
-
           <div class="col-md-4">
             <div class="contact-phone">
               <i class="ion-ios-telephone-outline"></i>
               <h3>Phone Number</h3>
-              <p>+216 58 669 926</a></p>
+              <p>+216 58 669 926</p>
             </div>
           </div>
-
           <div class="col-md-4">
             <div class="contact-email">
               <i class="ion-ios-email-outline"></i>
               <h3>Email</h3>
-              <p><a href="aiesec.medina.tunisia@gmail.com">aiesec.medina.tunisia@gmail.com</a></p>
+              <p><a href="mailto:aiesec.medina.tunisia@gmail.com">aiesec.medina.tunisia@gmail.com</a></p>
             </div>
           </div>
-
         </div>
-        <form action="https://script.google.com/macros/s/AKfycby7RmUDiJaM-LGrBJXjizF2_GwtSXKIxEtHHBqLVZgd/dev"
-          method="post">
+        <form action="https://script.google.com/macros/s/YOUR_SCRIPT_ID/dev" method="post">
           <div class="form-row">
             <div class="form-group col-md-6">
-              <input type="text" name="name" class="form-control" id="name" placeholder="First Name" required
-                minlength="4" pattern=".{4,}" title="Last Name must be at least 4 characters long" />
+              <input type="text" name="name" class="form-control" id="name" placeholder="First Name" required minlength="4" />
             </div>
             <div class="form-group col-md-6">
-              <input type="text" name="pname" class="form-control" id="pname" placeholder="Last Name" required
-                minlength="4" pattern=".{4,}" title="Last Name must be at least 4 characters long" />
+              <input type="text" name="pname" class="form-control" id="pname" placeholder="Last Name" required minlength="4" />
             </div>
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" name="pnumber" id="pnumber" placeholder="Your Phone Number" required
-              pattern="^\d{8}$" title="Phone number must be exactly 8 digits" />
+            <input type="text" class="form-control" name="pnumber" id="pnumber" placeholder="Your Phone Number" required pattern="^\d{8}$" title="Phone number must be exactly 8 digits" />
           </div>
           <div class="form-group">
             <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required />
           </div>
-          <div class="text-center"><button type="submit" class="ss">Register </button></div>
-
+          <div class="text-center"><button type="submit" class="ss">Register</button></div>
         </form>
       </div>
-
-      </div>
     </section>
-
   </main>
-
 
   <footer id="footer">
     <div class="container">
@@ -262,8 +223,7 @@
         &copy; Copyright <strong>STARTACT</strong>. All Rights Reserved
       </div>
       <div class="credits">
-
-        Designed by <a href="https://bootstrapmade.com/">AIESEC MEDINA </a>
+        Designed by <a href="https://bootstrapmade.com/">AIESEC MEDINA</a>
       </div>
     </div>
   </footer>
@@ -280,13 +240,9 @@
   <script src="lib/venobox/venobox.min.js"></script>
   <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
-
-  <!-- Template Main Javascript File -->
+  <!-- Main Javascript File -->
   <script src="js/main.js"></script>
   <script>
-
-
-
     // Countdown Timer
     var countDownDate = new Date("Nov 16, 2024 10:00:00").getTime();
     var countdownFunction = setInterval(function () {
@@ -302,7 +258,6 @@
       document.getElementById("minutes").innerHTML = minutes;
       document.getElementById("seconds").innerHTML = seconds;
 
-      // When countdown is over
       if (distance < 0) {
         clearInterval(countdownFunction);
         document.getElementById("countdown-timer").innerHTML = "The event has started!";
@@ -310,5 +265,4 @@
     }, 1000);
   </script>
 </body>
-
 </html>
