@@ -105,6 +105,7 @@
       background: #6c63ff;
     }
     .ss{
+      margin-bottom: 160px;
       background: #f82249;
     border: 0;
     padding: 10px 40px;
@@ -118,6 +119,9 @@
     }
     .ss:hover{
       background: #e0072f;
+    }
+    .ac{
+      margin-inline: 5px;
     }
   </style>
 </head>
@@ -135,7 +139,8 @@
           <li class="menu-active"><a href="#intro">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#countdown">Countdown</a></li>
-          <li class="buy-tickets"><a href="#contact">Register Now</a></li>
+          <li><a href="#con">Contact</a></li>
+          <li class="buy-tickets"><a href="https://forms.gle/3gv8grZAmU6dxBGs7">Register Now</a></li>
         </ul>
       </nav>
     </div>
@@ -194,29 +199,35 @@
 
       <div class="container">
 
-        <div class="section-header">
+        <div class="section-header" id="reg">
           <h2>Registration</h2>
           <p> Join Us for an Unforgettable Experience</p>
         </div>
-
+        <div class="text-center"><a href="https://forms.gle/3gv8grZAmU6dxBGs7"><button type="button" class="ss">Register Now</button></a></div>
+        <div class="section-header" id="con">
+          <h2 >Contact Us</h2>
+          <p> Feel Free to get in touch With Us</p>
+        </div>
         <div class="row contact-info">
-
+          
           <div class="col-md-4">
+            
             <div class="contact-address">
               <i class="ion-ios-location-outline"></i>
               <h3>Address</h3>
               <address>Campus Manouba</address>
             </div>
           </div>
-
+          
           <div class="col-md-4">
             <div class="contact-phone">
               <i class="ion-ios-telephone-outline"></i>
               <h3>Phone Number</h3>
-              <p>+216 58 669 926</p>
-              <p>+216 58 669 926</p>
-              <p>+216 58 669 926</p>
-              <p>+216 58 669 926</p>
+              <p class="ac">Organisation Commete Presedent</p>
+              <p><a>+216 58 669 926</a></p>
+              <br>
+              <p class="ac">Organisation Commete Vice Presedent Participant Experience</p>
+              <p><a>+216 44 800 020</a></p>
             </div>
           </div>
 
@@ -224,33 +235,19 @@
             <div class="contact-email">
               <i class="ion-ios-email-outline"></i>
               <h3>Email</h3>
-              <p><a href="aiesec.medina.tunisia@gmail.com">aiesec.medina.tunisia@gmail.com</a></p>
+              <p class="ac">Organisation Commete Presedent</p>
+              <p><a href="taha.amine.daboussi@aiesec.net">taha.amine.daboussi@aiesec.net</a></p>
+              <br>
+              <p class="ac">Organisation Commete Vice Presedent Participant Experience</p>
+              <p><a href="fayadhions@aiesec.net">fayadhions@aiesec.net</a></p>
             </div>
           </div>
 
         </div>
-        <form action="https://script.google.com/macros/s/AKfycby7RmUDiJaM-LGrBJXjizF2_GwtSXKIxEtHHBqLVZgd/dev"
-          method="post">
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <input type="text" name="name" class="form-control" id="name" placeholder="First Name" required
-                minlength="4" pattern=".{4,}" title="Last Name must be at least 4 characters long" />
-            </div>
-            <div class="form-group col-md-6">
-              <input type="text" name="pname" class="form-control" id="pname" placeholder="Last Name" required
-                minlength="4" pattern=".{4,}" title="Last Name must be at least 4 characters long" />
-            </div>
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control" name="pnumber" id="pnumber" placeholder="Your Phone Number" required
-              pattern="^\d{8}$" title="Phone number must be exactly 8 digits" />
-          </div>
-          <div class="form-group">
-            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required />
-          </div>
-          <div class="text-center"><button type="submit" class="ss">Register </button></div>
+        
+          
 
-        </form>
+        
       </div>
 
       </div>
