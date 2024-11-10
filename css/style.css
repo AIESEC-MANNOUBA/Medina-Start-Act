@@ -833,6 +833,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #schedule .tab-pane {
+  margin-inline: auto;
   transition: ease-in-out .2s;
 }
 
@@ -916,7 +917,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #venue .venue-info:before {
   content: "";
-  background: rgba(13, 20, 41, 0.8);
+  background: rgb(15 52 88);
   position: absolute;
   bottom: 0;
   top: 0;
